@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&family=Mochiy+Pop+One&family=Paytone+One&display=swap');
+
+/* todo decide fonts */
+
 :root {
+  --off-white: #fffaf7;
   --light: #efece3;
   --dark: #978661;
   --med: #c9c0a3;
+  --off-black: #0f0a04;
+  --headings: 'Paytone One', sans-serif;
+  --content: 'Mitr', sans-serif;
 }
 
 /* ------------------------- resets */
@@ -12,7 +20,17 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: black;
+}
+
+a,
+a * {
+  color: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 /* ------------------------- general */
@@ -20,29 +38,54 @@
 html {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--light);
+  color: var(--off-black);
+  background-color: var(--off-white);
+  font-family: var(--content);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
 }
 
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 /* ------------------------- header */
 
 header {
+  background-color: var(--light);
+}
+
+h1 {
+  margin-bottom: .8rem;
+}
+
+header .tag-line {
+  padding: .8rem 0;
   background-color: var(--med);
+  text-align: center;
+}
+
+header h2 {
+  font-size: 1.2rem;
 }
 
 header img {
-  height: 10rem;
+  height: 5rem;
 }
 
 /* ------------------------- main */
@@ -51,11 +94,11 @@ main {
   padding: 2rem;
 }
 
-main > .flex > * {
-  flex-basis: 80%;
+main > .flex {
+  justify-content: space-evenly;
 }
 
-h2 {
+main h2 {
   margin-bottom: 1rem;
 }
 
@@ -96,5 +139,15 @@ p {
 /* ------------------------- footer */
 
 footer {
+  color: var(--dark);
   background-color: var(--med);
+  text-align: center;
+}
+
+/* ------------------------- media queries */
+
+@media screen and (min-width: 768px) {
+  main > .flex > * {
+    flex-basis: 35%;
+  }
 }

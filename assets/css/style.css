@@ -1,6 +1,10 @@
 :root {
-  --red: #ff0000;
+  --light: #efece3;
+  --dark: #978661;
+  --med: #c9c0a3;
 }
+
+/* ------------------------- resets */
 
 * {
   cursor: default;
@@ -8,8 +12,10 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: var(--red);
+  color: black;
 }
+
+/* ------------------------- general */
 
 html {
   height: 100%;
@@ -17,6 +23,64 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: var(--light);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* ------------------------- header */
+
+header {
+  background-color: var(--med);
+}
+
+header img {
+  height: 10rem;
+}
+
+/* ------------------------- main */
+
+main {
+  padding: 2rem;
+}
+
+main > .flex > * {
+  flex-basis: 80%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: .6rem;
+}
+
+/* ------------------------- index */
+
+.amazon-link-container {
+  margin-top: 1.6rem;
+}
+
+#amazon-link {
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.index-main picture {
+  margin-top: 2rem;
+}
+
+/* ------------------------- back to top */
 
 #back-to-top {
   position: fixed;
@@ -29,16 +93,8 @@ html {
   visibility: visible;
 }
 
-header {
-  height: 50px;
-  background-color: red;
-}
-
-main {
-  height: 500px;
-}
+/* ------------------------- footer */
 
 footer {
-  background-color: grey;
-  height: 150px;
+  background-color: var(--med);
 }

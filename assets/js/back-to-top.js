@@ -18,3 +18,8 @@ window.addEventListener('scroll', function () {
         scrollBtn.style.bottom = scrollBtnOrigin;
     }
 });
+
+scrollBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
